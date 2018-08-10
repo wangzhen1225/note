@@ -14,7 +14,7 @@ ThreadLocal类的作用就是你在多线程环境中使用它之后，各个线
 
 如图所示:
 
-![ThreadLocal原理](/Users/jackwang/笔记/ThreadLocal原理.png)
+![ThreadLocal原理](https://ws2.sinaimg.cn/large/0069RVTdgy1fu4kdo60ewj31cc0t4n5v.jpg)
 
 
 
