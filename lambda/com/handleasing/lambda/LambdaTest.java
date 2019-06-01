@@ -62,4 +62,34 @@ public class LambdaTest {
 		}
 	}
 
+
+
+	/**
+	 * 
+	 * @param str  待处理的字符串
+	 * @param function 函数式接口 -> 可以理解为接受的是一个处理操作 (行为 参数化) 
+	 * @return
+	 */
+	public String handString(String str,MyStringFunction function) {
+		 return function.getValue(str);
+	}
+	
+	@Test
+	public void test4() {
+		String str = "\t\t\t jackWang";
+		System.out.println("source str:"+str);
+		//字符串转大写
+		String  str1 = handString(str, (x) -> x.toUpperCase() ); 
+		System.out.println("字符串转大写:"+str1);
+		//字符串截取
+		String str2 = handString(str, (x) -> x.substring(10));
+		System.out.println("字符串截取:"+str2);
+		
+		//字符串去除首尾空格
+		String str3 = handString(str, (x) -> x.trim());
+		System.out.println("字符串去除首尾巴空格:"+str3);
+	}
+
+
+
 }
